@@ -15,8 +15,15 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
+import DescriptionIcon from '@material-ui/icons/Description';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import BuildIcon from '@material-ui/icons/Build';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
+import LockIcon from '@material-ui/icons/Lock';
+import EditIcon from '@material-ui/icons/Edit';
 
 const drawerWidth = 240;
 
@@ -89,7 +96,7 @@ export default function PersistentDrawerLeft() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -130,21 +137,45 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+            <ListItem onClick={() => { window.location.href='/' }} button={true} key={'Home'}>
+            <ListItemIcon><HomeIcon/ ></ListItemIcon>
+              <ListItemText primary={'Home'} />
             </ListItem>
-          ))}
+            <ListItem onClick={() => { window.location.href='/about_me/professional' }} button={true} key={'AboutMe'}>
+            <ListItemIcon><AccountCircleIcon/ ></ListItemIcon>
+              <ListItemText primary={'All my Skills'} />
+            </ListItem>
+            <ListItem onClick={() => { window.location.href='/cv' }} button={true} key={'CV'}>
+            <ListItemIcon><DescriptionIcon/ ></ListItemIcon>
+              <ListItemText primary={'CV and Resume'} />
+            </ListItem>
+            <ListItem onClick={() => { window.location.href='/about_me/personal' }} button={true} key={'Personal'}>
+            <ListItemIcon><SportsEsportsIcon/ ></ListItemIcon>
+              <ListItemText primary={'Spare Time'} />
+            </ListItem>
+            <ListItem onClick={() => { window.location.href='/design' }} button={true} key={'Design'}>
+            <ListItemIcon><BuildIcon/ ></ListItemIcon>
+              <ListItemText primary={'This Websites Technoogies'} />
+            </ListItem>
+            <ListItem onClick={() => { window.location.href='/current_projects' }} button={true} key={'CurrentProjects'}>
+            <ListItemIcon><AccountTreeIcon/ ></ListItemIcon>
+              <ListItemText primary={'Current Projects'} />
+            </ListItem>
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+        <ListItem onClick={() => { window.location.href='/login' }} button={true} key={'Login'}>
+            <ListItemIcon><VpnKeyIcon/ ></ListItemIcon>
+              <ListItemText primary={'Login'} />
             </ListItem>
-          ))}
+            <ListItem onClick={() => { window.location.href='/edit_profile' }} button={true} key={'EditProfile'}>
+            <ListItemIcon><EditIcon/ ></ListItemIcon>
+              <ListItemText primary={'Edit/Delete Profile'} />
+            </ListItem>
+            <ListItem onClick={() => { window.location.href='/login' }} button={true} key={'Login'}>
+            <ListItemIcon><LockIcon/ ></ListItemIcon>
+              <ListItemText primary={'Logout'} />
+            </ListItem>
         </List>
       </Drawer>
       <main
