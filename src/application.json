@@ -1,0 +1,9 @@
+{
+    "urls": {
+        "fast_api": "localhost:8000/api/",
+        "django": "localhost:8001/api/"
+    },
+    "apis": {
+            "auth": "fast_api"
+    }
+}
