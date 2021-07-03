@@ -116,9 +116,6 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-           {getPageName()}
-          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
