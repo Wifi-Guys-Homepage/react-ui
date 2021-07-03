@@ -1,4 +1,4 @@
-function processUrl(url){
+function processUrl(url, environment){
   return 'localhost:8000/api/'
 }
 
@@ -6,8 +6,8 @@ function processVariable(){
 
 }
 
-const getData=()=>{
-    fetch('data.json'
+const getData=(jsonfile)=>{
+    fetch(jsonfile
     ,{
       headers : { 
         'Content-Type': 'application/json',
