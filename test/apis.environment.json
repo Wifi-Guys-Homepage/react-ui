@@ -1,8 +1,0 @@
-{
-    "urls": {
-        "test": "kindaclose:007/ipa/"
-    },
-    "apis": {
-            "auth": "test"
-    }
-}

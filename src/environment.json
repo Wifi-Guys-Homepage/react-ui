@@ -1,6 +1,1 @@
-{
-    "urls": {
-        "fast_api": "farawayhost:0008/ipa/",
-        "django": "localhost:8001/ipa/"
-    }
-}
+{}
