@@ -2,7 +2,7 @@ import React from 'react'
 const EditProfile = () => {
     return (
         <div>
-            EditProfile
+            Allows users to edit or delete profiles
         </div>
     );
 };export default EditProfile;
