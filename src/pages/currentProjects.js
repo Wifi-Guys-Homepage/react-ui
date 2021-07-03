@@ -2,7 +2,7 @@ import React from 'react'
 const CurrentProjects = () => {
     return (
         <div>
-            CurrentProjects
+            List of current projects from api + github
         </div>
     );
 };export default CurrentProjects;
