@@ -22,7 +22,7 @@ class JWTAuth extends BaseAuth {
         return false;
     }
 
-    grants(){
+    grant(grant){
 
     }
 
