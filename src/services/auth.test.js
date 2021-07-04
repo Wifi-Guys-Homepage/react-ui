@@ -16,17 +16,14 @@ let fake_jwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
  */
 
 test('Expect JWTAuth Module to return Subject as Username', () => {
-
+    expect(new JWTAuth().userName()).toEqual("1234567890");
 })
 
 test('Expect JWTAuth Module to return Thu Jan 18 2018 01:30:22 on issued time', () => {
-
+  expect(new JWTAuth().issuedTime()).toEqual(new Date(2018, 1, 18, 1, 30, 22));
 })
 
-test('Expect Authenticate calls callAuthenticator function and confirms response is signed correctly', () => {
-
-})
 
 test('Expect JWTAuth Module grant function fetches correct grant', () => {
-    
+  expect(new JWTAuth().grant('name')).toEqual('John Doe');
 })
