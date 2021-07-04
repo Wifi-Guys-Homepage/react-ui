@@ -23,7 +23,7 @@ class JWTAuth extends BaseAuth {
 
     }
     getTokenFromStorage(){
-        return '';
+        return ''; // TODO get token from local/cookie storage
     }
 
     authenticate(){
