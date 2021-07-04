@@ -20,7 +20,7 @@ test('Expect JWTAuth Module to return Subject as Username', () => {
 })
 
 test('Expect JWTAuth Module to return Thu Jan 18 2018 01:30:22 on issued time', () => {
-  expect(new JWTAuth(fakeJWT).issuedTime()).toEqual(new Date(2018, 1, 18, 1, 30, 22));
+  expect(new JWTAuth(fakeJWT).issuedTime()).toEqual(new Date(2018, 0, 18, 1, 30, 22));
 })
 
 test('Expect JWTAuth Module grant function fetches correct grant', () => {
